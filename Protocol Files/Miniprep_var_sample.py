@@ -3,9 +3,9 @@ import requests
 def notify_slack(message):
     webhook_url = "INSERT WEB HOOK URL HERE"
     try:
-        requests.post(webhook_url, json={"text": f"<USERID> {message}"}) ## add your own user ID here
+        requests.post(webhook_url, json={"text": f"<@USERID> {message}"}) ## add your own user ID here
     except Exception as e:
-        print(f"<@U09MFUW1YCF> Slack notification failed: {e}")
+        print(f"<@USERID> Slack notification failed: {e}")
 
 metadata = {
     'protocolName': 'Vacuum miniprep variable samples',
