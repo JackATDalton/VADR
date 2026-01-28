@@ -1,7 +1,7 @@
 from opentrons import protocol_api
 import requests
 def notify_slack(message):
-    webhook_url = "https://hooks.slack.com/services/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"
+    webhook_url = "INSERT WEB HOOK URL HERE"
     try:
         requests.post(webhook_url, json={"text": f"<@U09MFUW1YCF> {message}"}) ## add your own user ID here
     except Exception as e:
